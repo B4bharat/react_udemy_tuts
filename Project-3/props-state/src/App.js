@@ -20,14 +20,30 @@ class App extends Component {
 }
 
 class Parent extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      cars: ['s-BMW', 's-MERC', 's-CITY', 's-Audi']
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      cars: this.state.cars.reverse()
+    });
+  }
+
   render() {
     return (
       <div>
-        <h2>Just some info</h2>
+        <h2 onClick={this.handleClick}>Just some info</h2>
         <Cars
           msg="cars are cool"
           model={3467}
-          coolCars={this.props.cars}
+          coolCars={this.state.cars}
         />
       </div>
     );
