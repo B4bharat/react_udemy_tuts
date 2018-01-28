@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 ./Project-2/component-basic/node_modules
+./Project-3/component-basic/node_modules
 
 # testing
 /coverage
