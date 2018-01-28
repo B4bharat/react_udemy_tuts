@@ -3,20 +3,15 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.yourname = 'ammy';
-    this.state = {};
-  }
-
   sayHello(name) {
-    return `Hello ${name}`;
+    return 'Hello ' + name;
   }
 
   render() {
+    const myName = 'Bharat';
     return (
       <div className="App">
-        <h2>Just some sample data: {this.yourname} </h2>
+        <h2>Just some sample data: {this.sayHello(myName)}</h2>
       </div>
     );
   }
