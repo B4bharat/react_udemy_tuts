@@ -45,13 +45,13 @@ class Cars extends Component {
         <h3>I am from cars component</h3>
         <p>{this.props.msg}</p>
         <p>{this.props.model}</p>
-        <ul>
+        <div>
           {
             this.props.coolCars.map((car, i) => {
-              return <li>{car}</li>;
+              return <p key={i}>{car}</p>;
             })
           }
-        </ul>
+        </div>
       </div>
     );
   }
